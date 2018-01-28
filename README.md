@@ -20,6 +20,8 @@ need to buy to do all upgrades explained below
 - 2mm/4mm PTFE (teflon) tube (min. 50cm length)
 - 2.5mm GT2 timing belts (min. 200cm length)
 - 2x 4mm pneumatic adapter (tube feed)
+- 2x M5x30 screws
+- 2x M5 self-sealing nuts
 - 2x NEMA 17 stepper motors
 
 Note: The PTFE tube needs to have inner diameter
@@ -83,6 +85,10 @@ prints will have a better quality.
 
 Install the belt tensioners, the belt holders, the t-corners
 and the z-wobble fixes on your Anet A8 printer.
+
+Note that the x-tensioner requires 2 M5x35 screws and
+matching self-sealing nuts. The screws are pushing the
+belt tensioner away from the X-rods.
 
 Make sure to use proper fiber-rubber GT2 belts, not the
 plastic OEM ones that came with the printer. It is best
@@ -304,6 +310,14 @@ Install the motor parts as in the photo above, do the same for
 the extruder. It is necessary to have the PTFE tube and the
 pneumatic tube feeds available.
 
+An important note here is that PTFE tube feeds have inch measurements,
+not metric ones (as it's pneumatic hardware). So it is important to
+buy a 3/8" tube feed (~9.51mm), as M10 (~10.18mm) would be too big to
+fit the adapter. If you have an M6 thread cutter, it is recommended
+to use it for the smaller side of the pneumatic adapter, so that less
+stress is on the PLA (or ABS) material when being screwed into the
+metal motor block on the X-carriage.
+
 Mount the extruder motor on the top left of the printer's frame,
 so that the PTFE tube-side points to the front-left direction.
 
@@ -372,6 +386,24 @@ have too much stress on them.
 
 ![heatbed-wiring](./photos/heatbed-wiring.jpg)
 
+<img src="./photos/heatbed-solder-procedure-03.jpg" align="right" width="128px">
+<img src="./photos/heatbed-solder-procedure-02.jpg" align="right" width="128px">
+<img src="./photos/heatbed-solder-procedure-01.jpg" align="right" width="128px">
+
+At first your heatbed will stop working, and the heat will stop at the connector, eventually leading to a burnt connector or worse - [it's a fire hazard](http://forums.reprap.org/read.php?392,493405).
+The procedure is fairly simple, even if you are new to soldering. Just be patient and remove any excess solder you may use.
+If the old solder doesn't come off, put a bit of new solder on it and it will melt immediately.
+
+You can try removing the wires and pulling the connector with pliers, it will come off with a bit of force. If you desolder and remove the outer pins you can still use a piece of the original connector - cut to fit - for the thermistor.
+
+<img src="./photos/heatbed-solder-procedure-05.jpg" align="right" width="128px">
+<img src="./photos/heatbed-solder-procedure-04.jpg" align="right" width="128px">
+
+You should use an higher-gauge wire to connect the heatbed, the one that comes with the printer is too thin to carry the 10A used by the bed. A thicker cable means that the wire will stay colder when transferring current.
+
+Remember to insert heat-shrink tubing before soldering (keep it distant from the ends or it will shrink immediately) and put it between the wire and the metal frame of the bed. It shouldn't be an issue if the wire touches the coating at the bottom of the heatbed, but it's better to keep them separated.
+
+**Do not connect both** the + or - pins, the bed will be able to take up to 20A from the motherboard, leading to a burnt motherboard.
 
 ----------
 
